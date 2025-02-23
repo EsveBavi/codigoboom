@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Desactivando la Bomba con LDAP</title>
+</head>
+<body>
+  <div class="bomb-container">
+    <div class="timer" id="timer">05:00</div>
+    <div class="code-panel">
+      <input type="text" class="code-input" maxlength="4" id="code1">
+      <input type="text" class="code-input" maxlength="4" id="code2">
+      <input type="text" class="code-input" maxlength="4" id="code3">
+      <input type="text" class="code-input" maxlength="4" id="code4">
+    </div>
+    <button class="button" id="defuse-button" onclick="defuseBomb()">Desactivar Bomba</button>
+    <div class="message" id="message"></div>
+    <div class="video-container" id="video-container">
+      <video id="explosion-video" controls>
+        <source src="Bomba.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+    <button class="button" id="restart-button" onclick="restartGame()" style="display: none;">Reiniciar</button>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="MUSIC.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+ 
+  <script src="bomb.obfuscated.js"></script>
+</body>
+</html>
