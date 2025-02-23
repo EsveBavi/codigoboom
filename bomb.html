@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Desactivando la Bomba con LDAP</title>
+</head>
+<body>
+  <div class="bomb-container">
+    <div class="timer" id="timer">05:00</div>
+    <div class="code-panel">
+      <input type="text" class="code-input" maxlength="4" id="code1">
+      <input type="text" class="code-input" maxlength="4" id="code2">
+      <input type="text" class="code-input" maxlength="4" id="code3">
+      <input type="text" class="code-input" maxlength="4" id="code4">
+    </div>
+    <button class="button" id="defuse-button" onclick="defuseAlarm()">Desactivar Bomba</button>
+    <div class="message" id="message"></div>
+  </div>
+ 
+  <script src="bomb.obfuscated.js"></script>
+</body>
+</html>
